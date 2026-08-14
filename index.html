@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge | Learn. Build. Grow.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Skill<span>Bridge</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#resources">Resources</a>
+        <a href="#opportunities">Opportunities</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div>
+        <p class="tag">YOUR CAREER JOURNEY STARTS HERE</p>
+
+        <h1>
+            Learn the right skills.
+            <span>Build your future.</span>
+        </h1>
+
+        <p class="description">
+            SkillBridge helps students discover skills, free learning
+            resources, projects and career opportunities in one place.
+        </p>
+
+        <a href="#skills" class="button">Explore Skills →</a>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <h2>Choose Your Career Path</h2>
+    <p class="subtitle">Select a path to discover what you should learn.</p>
+
+    <div class="cards">
+
+        <div class="card" onclick="showPath('Web Development')">
+            <div class="icon">💻</div>
+            <h3>Web Development</h3>
+            <p>Build websites and modern web applications.</p>
+        </div>
+
+        <div class="card" onclick="showPath('AI & ML')">
+            <div class="icon">🤖</div>
+            <h3>AI & ML</h3>
+            <p>Explore artificial intelligence and machine learning.</p>
+        </div>
+
+        <div class="card" onclick="showPath('Data Science')">
+            <div class="icon">📊</div>
+            <h3>Data Science</h3>
+            <p>Learn data analysis and visualization.</p>
+        </div>
+
+        <div class="card" onclick="showPath('UI/UX Design')">
+            <div class="icon">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>Design simple and beautiful digital experiences.</p>
+        </div>
+
+    </div>
+
+    <div id="result" class="result"></div>
+</section>
+<section id="recommendation" class="section recommendation">
+    <h2>🎯 Get Your Personalized Learning Path</h2>
+    <p class="subtitle">
+        Tell us your goal and current level. SkillBridge will suggest a path for you.
+    </p>
+
+    <div class="form-box">
+
+        <label for="goal">What is your goal?</label>
+        <select id="goal">
+            <option value="">Select your goal</option>
+            <option value="internship">Get an Internship</option>
+            <option value="job">Prepare for a Job</option>
+            <option value="skill">Learn a New Skill</option>
+            <option value="project">Build Projects</option>
+        </select>
+
+        <label for="level">What is your current level?</label>
+        <select id="level">
+            <option value="">Select your level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+
+        <button class="recommend-btn" onclick="getRecommendation()">
+            Get My Learning Path →
+        </button>
+
+        <div id="recommendationResult" class="recommendation-result"></div>
+
+    </div>
+</section>
+<section id="resources" class="section light">
+    <h2>📚 Free Learning Resources</h2>
+    <p class="subtitle">
+        Learn from trusted platforms without spending money.
+    </p>
+
+    <div class="resource-grid">
+
+        <div class="resource">
+            <div class="icon">🌐</div>
+            <h3>MDN Web Docs</h3>
+            <p>
+                Learn HTML, CSS and JavaScript with structured,
+                beginner-friendly web development resources.
+            </p>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development"
+               target="_blank" class="resource-btn">
+                Start Learning →
+            </a>
+        </div>
+
+        <div class="resource">
+            <div class="icon">💻</div>
+            <h3>GitHub Education</h3>
+            <p>
+                Discover free tools, learning paths and resources
+                designed especially for students.
+            </p>
+            <a href="https://education.github.com/"
+               target="_blank" class="resource-btn">
+                Explore →
+            </a>
+        </div>
+
+        <div class="resource">
+            <div class="icon">🐍</div>
+            <h3>Khan Academy</h3>
+            <p>
+                Learn Python, JavaScript, HTML, CSS, SQL and
+                computer science fundamentals.
+            </p>
+            <a href="https://www.khanacademy.org/computing"
+               target="_blank" class="resource-btn">
+                Start Learning →
+            </a>
+        </div>
+
+        <div class="resource">
+            <div class="icon">🎓</div>
+            <h3>Code.org</h3>
+            <p>
+                Explore free online computer science courses
+                for beginners and university students.
+            </p>
+            <a href="https://code.org/en-US/students/online-courses"
+               target="_blank" class="resource-btn">
+                Explore Courses →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="opportunities" class="section">
+    <h2>🚀 Student Opportunities</h2>
+    <p class="subtitle">
+        Discover places to learn, compete, and gain experience.
+    </p>
+
+    <div class="opportunity-grid">
+
+        <div class="opportunity">
+            <span>💻</span>
+            <h3>Hackathons</h3>
+            <p>
+                Participate in hackathons to solve real-world problems,
+                build projects, and showcase your skills.
+            </p>
+            <a href="https://devpost.com/hackathons"
+               target="_blank" class="resource-btn">
+                Find Hackathons →
+            </a>
+        </div>
+
+        <div class="opportunity">
+            <span>💼</span>
+            <h3>Internships</h3>
+            <p>
+                Find internships and gain practical experience
+                while building your career profile.
+            </p>
+            <a href="https://internshala.com/internships/"
+               target="_blank" class="resource-btn">
+                Find Internships →
+            </a>
+        </div>
+
+        <div class="opportunity">
+            <span>🏆</span>
+            <h3>Competitions</h3>
+            <p>
+                Discover quizzes, case competitions, ideathons,
+                challenges, and other student opportunities.
+            </p>
+            <a href="https://unstop.com/competitions"
+               target="_blank" class="resource-btn">
+                Find Competitions →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h2>SkillBridge</h2>
+    <p>Connect. Learn. Grow.</p>
+    <p>© 2026 SkillBridge</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
